@@ -9,7 +9,7 @@ def default_location():
         with open(filepath,mode="r",encoding="utf-8") as file:
             for line in file:
                 if line.startswith("-o") :
-                    output,downloadPathTitleExt =(line.split())
+                    output,downloadPathTitleExt = line.split()
                     downloadPath,title,ext = downloadPathTitleExt.split("%")
                     return (downloadPath.strip('"'))
     else :
